@@ -11,6 +11,8 @@
 #import "CCURLModel.h"
 #import "CCHomeViewController.h"
 #import "CCMainTableViewCell.h"
+#import <MJRefresh.h>
+#import <Masonry.h>
 
 @interface CCMainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -49,7 +51,9 @@
     [self transformJsonToModel:dict[@"list"] changeArray:self.urlArray];
     
     [self.view addSubview:self.tableView];
-    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
     [self initVipURLs];
 }
 
@@ -97,6 +101,8 @@
                                }else {
                                    NSLog(@"connectionError = %@",connectionError);
                                }
+                               
+                               [self.tableView.mj_header endRefreshing];
                            }];
 }
 
@@ -111,7 +117,12 @@
         tableview.layer.masksToBounds = NO;
         tableview.tableFooterView = [UIView new];
         [tableview registerClass:[CCMainTableViewCell class] forCellReuseIdentifier:@"cell"];
-        
+        __weak CCMainViewController *weakSelf = self;
+        tableview.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+            
+            [weakSelf initVipURLs];
+        }];
+    
         _tableView = tableview;
     }
     return _tableView;
@@ -145,6 +156,7 @@
 
     CCHomeViewController *view = [CCHomeViewController new];
     view.model = self.videoArray[indexPath.row];
+    view.modelsArray = self.urlArray;
     [self.navigationController pushViewController:view animated:YES];
     
 }

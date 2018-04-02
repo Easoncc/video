@@ -7,6 +7,7 @@
 //
 
 #import "CCMainTableViewCell.h"
+#import <Masonry.h>
 
 @implementation CCMainTableViewCell
 
@@ -30,6 +31,10 @@
         
         [self.contentView addSubview:self.nameLabel];
         
+        [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(0);
+        }];
+        
     }
     return self;
 }
@@ -39,7 +44,7 @@
     if (!_nameLabel) {
         
         UILabel *label = [UILabel new];
-        label.frame = CGRectMake(0, 0, self.frame.size.width, 100);
+    
         label.font = [UIFont boldSystemFontOfSize:19];
         label.textColor = [UIColor blackColor];
         label.numberOfLines = 2;

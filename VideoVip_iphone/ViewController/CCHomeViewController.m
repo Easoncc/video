@@ -9,14 +9,15 @@
 #import "CCHomeViewController.h"
 #import <WebKit/WebKit.h>
 #import "JSONKit.h"
+#import <Masonry.h>
 
-@interface CCHomeViewController ()<WKNavigationDelegate,WKUIDelegate,UIWebViewDelegate>
+@interface CCHomeViewController ()<WKNavigationDelegate,WKUIDelegate,UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
 //@property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) NSMutableArray *buttonsArray;
-@property (nonatomic, strong) CCURLModel *vipmodel;
-@property (nonatomic, strong) UIView *vipsView;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSIndexPath *selectIndexPath;
 
 @end
 
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
-    
+    self.selectIndexPath = [NSIndexPath indexPathForRow:999 inSection:0];
     [self initNar];
     [self initSubView];
 }
@@ -47,54 +48,26 @@
 }
 
 - (void)vipItemClick{
-    
-    for (UIView *view in [self.view subviews]) {
-        if (self.vipsView == view) {
-            [view removeFromSuperview];
-            return;
-        }
-    }
-    
-    [self.view addSubview:self.vipsView];
-    
-//    self.vipmodel = [CCURLModel createTitle:@"万能接口3" url:@"http://vip.jlsprh.com/index.php?url="];
-//
-//    NSString *url = [self.webView stringByEvaluatingJavaScriptFromString:@"document.location.href"];
-//
-//    NSString *originUrl = [[url componentsSeparatedByString:@"url="] lastObject];
-//
-//    if (![url hasPrefix:@"http"]) {
-//        return ;
-//    }
-//
-//    NSString *finalUrl = [NSString stringWithFormat:@"%@%@", self.vipmodel.url?:@"",originUrl?:@""];
-//    NSLog(@"finalUrl = %@", finalUrl);
-//
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
-//    [self.webView loadRequest:request];
-}
-
-
-
-#pragma mark - view
-
-- (UIView *)vipsView{
-    
-    if (!_vipsView) {
-        
-        UIView *view = [UIView new];
-        view.backgroundColor = [UIColor whiteColor];
-        
-        _vipsView = view;
-    }
-    
-    return _vipsView;
+    [self setTableViewAnimation:!self.tableView.alpha];
 }
 
 #pragma mark - common
 
-- (void)setupVipsView{
+- (void)setupWebView:(CCURLModel *)model{
     
+    NSString *url = [self.webView stringByEvaluatingJavaScriptFromString:@"document.location.href"];
+
+    NSString *originUrl = [[url componentsSeparatedByString:@"url="] lastObject];
+
+    if (![url hasPrefix:@"http"]) {
+        return ;
+    }
+
+    NSString *finalUrl = [NSString stringWithFormat:@"%@%@", model.url?:@"",originUrl?:@""];
+    NSLog(@"finalUrl = %@", finalUrl);
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:finalUrl]];
+    [self.webView loadRequest:request];
 }
 
 - (void)initSubView{
@@ -114,8 +87,17 @@
     [self.webView loadRequest:request];
     
     [self.view addSubview:self.webView];
+    [self.view addSubview:self.tableView];
     
-    [self setupVipsView];
+    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
+    
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.top.bottom.mas_equalTo(0);
+        make.width.mas_equalTo(KDeviceWidth/2);
+    }];
+    
 }
 
 - (void)initNar{
@@ -126,7 +108,12 @@
     self.navigationItem.rightBarButtonItem = rightItem;
 }
 
-
+- (void)setTableViewAnimation:(int)alpha{
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.tableView.alpha = alpha;
+    } completion:^(BOOL finished) {
+    }];
+}
 
 #pragma mark - WKNavigationDelegate
 
@@ -184,5 +171,72 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     ;
 }
+
+#pragma mark - view
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        
+        UITableView *tableview = [[UITableView alloc] initWithFrame:CGRectMake(KDeviceWidth/2, 0.0, KDeviceWidth/2, KDeviceHeight) style:UITableViewStylePlain];
+        tableview.delegate = self;
+        tableview.dataSource = self;
+        tableview.backgroundColor = [UIColor whiteColor];
+        tableview.tableFooterView = [UIView new];
+        [tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+        tableview.layer.cornerRadius = 10;
+        tableview.layer.masksToBounds = YES;
+        tableview.alpha = 0;
+        
+        _tableView = tableview;
+    }
+    return _tableView;
+    
+}
+
+#pragma mark - tableViewDelegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.modelsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    CCURLModel *model = self.modelsArray[indexPath.row];
+    cell.textLabel.text = model.title;
+    cell.textLabel.font = [UIFont systemFontOfSize:15.0];
+    
+    if (self.selectIndexPath.row == indexPath.row) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:self.selectIndexPath];
+    if (oldCell) {
+        oldCell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    self.selectIndexPath = indexPath;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    [self setupWebView:self.modelsArray[indexPath.row]];
+    [self setTableViewAnimation:0];
+}
+
 
 @end

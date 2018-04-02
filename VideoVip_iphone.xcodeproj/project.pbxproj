@@ -19,9 +19,12 @@
 		4253CC68206E46FC001F5B85 /* CCItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC67206E46FC001F5B85 /* CCItemButton.m */; };
 		4253CC6B206E49A6001F5B85 /* CCMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC6A206E49A6001F5B85 /* CCMainTableViewCell.m */; };
 		4253CC6D206E4CFE001F5B85 /* viplist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4253CC6C206E4CFE001F5B85 /* viplist.json */; };
+		5F01F2869DA6732BBFCC5916 /* libPods-VideoVip_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 416B8ED785A376FD0896F978 /* libPods-VideoVip_iphone.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110A5EF539636B03C00CB818 /* Pods-VideoVip_iphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoVip_iphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VideoVip_iphone/Pods-VideoVip_iphone.debug.xcconfig"; sourceTree = "<group>"; };
+		416B8ED785A376FD0896F978 /* libPods-VideoVip_iphone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VideoVip_iphone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4253CC3C206E0F15001F5B85 /* VideoVip_iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoVip_iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4253CC3F206E0F15001F5B85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4253CC40206E0F15001F5B85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		4253CC69206E49A6001F5B85 /* CCMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMainTableViewCell.h; sourceTree = "<group>"; };
 		4253CC6A206E49A6001F5B85 /* CCMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMainTableViewCell.m; sourceTree = "<group>"; };
 		4253CC6C206E4CFE001F5B85 /* viplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viplist.json; sourceTree = "<group>"; };
+		C65D66A471D6511FE4E1565F /* Pods-VideoVip_iphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoVip_iphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VideoVip_iphone/Pods-VideoVip_iphone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F01F2869DA6732BBFCC5916 /* libPods-VideoVip_iphone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,8 @@
 			children = (
 				4253CC3E206E0F15001F5B85 /* VideoVip_iphone */,
 				4253CC3D206E0F15001F5B85 /* Products */,
+				B74690BD08A3A91F32221706 /* Pods */,
+				EAF32CC867CBEA8F93947694 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +146,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B74690BD08A3A91F32221706 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				110A5EF539636B03C00CB818 /* Pods-VideoVip_iphone.debug.xcconfig */,
+				C65D66A471D6511FE4E1565F /* Pods-VideoVip_iphone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EAF32CC867CBEA8F93947694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				416B8ED785A376FD0896F978 /* libPods-VideoVip_iphone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4253CC52206E0F15001F5B85 /* Build configuration list for PBXNativeTarget "VideoVip_iphone" */;
 			buildPhases = (
+				53E2F9F470E341E26E87B430 /* [CP] Check Pods Manifest.lock */,
 				4253CC38206E0F15001F5B85 /* Sources */,
 				4253CC39206E0F15001F5B85 /* Frameworks */,
 				4253CC3A206E0F15001F5B85 /* Resources */,
+				F396BB7DBE8F4CED48B57732 /* [CP] Embed Pods Frameworks */,
+				0B0ABA350FCD01ABA94AEB79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,6 +232,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B0ABA350FCD01ABA94AEB79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoVip_iphone/Pods-VideoVip_iphone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53E2F9F470E341E26E87B430 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F396BB7DBE8F4CED48B57732 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VideoVip_iphone/Pods-VideoVip_iphone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4253CC38206E0F15001F5B85 /* Sources */ = {
@@ -350,10 +425,11 @@
 		};
 		4253CC53206E0F15001F5B85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 110A5EF539636B03C00CB818 /* Pods-VideoVip_iphone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6AS4N82Q9E;
+				DEVELOPMENT_TEAM = UERK7QRRRZ;
 				INFOPLIST_FILE = VideoVip_iphone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -365,10 +441,11 @@
 		};
 		4253CC54206E0F15001F5B85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C65D66A471D6511FE4E1565F /* Pods-VideoVip_iphone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6AS4N82Q9E;
+				DEVELOPMENT_TEAM = UERK7QRRRZ;
 				INFOPLIST_FILE = VideoVip_iphone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
