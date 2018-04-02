@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4253CC41206E0F15001F5B85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC40206E0F15001F5B85 /* AppDelegate.m */; };
+		4253CC47206E0F15001F5B85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4253CC45206E0F15001F5B85 /* Main.storyboard */; };
+		4253CC49206E0F15001F5B85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4253CC48206E0F15001F5B85 /* Assets.xcassets */; };
+		4253CC4C206E0F15001F5B85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4253CC4A206E0F15001F5B85 /* LaunchScreen.storyboard */; };
+		4253CC4F206E0F15001F5B85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC4E206E0F15001F5B85 /* main.m */; };
+		4253CC57206E0FB3001F5B85 /* CCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC56206E0FB3001F5B85 /* CCHomeViewController.m */; };
+		4253CC5C206E114F001F5B85 /* CCURLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC5B206E114F001F5B85 /* CCURLModel.m */; };
+		4253CC61206E3BB1001F5B85 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC5F206E3BB1001F5B85 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4253CC64206E4367001F5B85 /* CCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC63206E4367001F5B85 /* CCMainViewController.m */; };
+		4253CC68206E46FC001F5B85 /* CCItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC67206E46FC001F5B85 /* CCItemButton.m */; };
+		4253CC6B206E49A6001F5B85 /* CCMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4253CC6A206E49A6001F5B85 /* CCMainTableViewCell.m */; };
+		4253CC6D206E4CFE001F5B85 /* viplist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4253CC6C206E4CFE001F5B85 /* viplist.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4253CC3C206E0F15001F5B85 /* VideoVip_iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoVip_iphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4253CC3F206E0F15001F5B85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4253CC40206E0F15001F5B85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4253CC46206E0F15001F5B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4253CC48206E0F15001F5B85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4253CC4B206E0F15001F5B85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4253CC4D206E0F15001F5B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4253CC4E206E0F15001F5B85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4253CC55206E0FB3001F5B85 /* CCHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCHomeViewController.h; sourceTree = "<group>"; };
+		4253CC56206E0FB3001F5B85 /* CCHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCHomeViewController.m; sourceTree = "<group>"; };
+		4253CC5A206E114F001F5B85 /* CCURLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCURLModel.h; sourceTree = "<group>"; };
+		4253CC5B206E114F001F5B85 /* CCURLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCURLModel.m; sourceTree = "<group>"; };
+		4253CC5F206E3BB1001F5B85 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		4253CC60206E3BB1001F5B85 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		4253CC62206E4367001F5B85 /* CCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMainViewController.h; sourceTree = "<group>"; };
+		4253CC63206E4367001F5B85 /* CCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMainViewController.m; sourceTree = "<group>"; };
+		4253CC66206E46FC001F5B85 /* CCItemButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCItemButton.h; sourceTree = "<group>"; };
+		4253CC67206E46FC001F5B85 /* CCItemButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCItemButton.m; sourceTree = "<group>"; };
+		4253CC69206E49A6001F5B85 /* CCMainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMainTableViewCell.h; sourceTree = "<group>"; };
+		4253CC6A206E49A6001F5B85 /* CCMainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMainTableViewCell.m; sourceTree = "<group>"; };
+		4253CC6C206E4CFE001F5B85 /* viplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = viplist.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4253CC39206E0F15001F5B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4253CC33206E0F15001F5B85 = {
+			isa = PBXGroup;
+			children = (
+				4253CC3E206E0F15001F5B85 /* VideoVip_iphone */,
+				4253CC3D206E0F15001F5B85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4253CC3D206E0F15001F5B85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC3C206E0F15001F5B85 /* VideoVip_iphone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4253CC3E206E0F15001F5B85 /* VideoVip_iphone */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC65206E46E6001F5B85 /* View */,
+				4253CC5D206E3BB1001F5B85 /* Library */,
+				4253CC59206E1129001F5B85 /* Model */,
+				4253CC58206E111A001F5B85 /* ViewController */,
+				4253CC3F206E0F15001F5B85 /* AppDelegate.h */,
+				4253CC40206E0F15001F5B85 /* AppDelegate.m */,
+				4253CC45206E0F15001F5B85 /* Main.storyboard */,
+				4253CC48206E0F15001F5B85 /* Assets.xcassets */,
+				4253CC4A206E0F15001F5B85 /* LaunchScreen.storyboard */,
+				4253CC4D206E0F15001F5B85 /* Info.plist */,
+				4253CC6C206E4CFE001F5B85 /* viplist.json */,
+				4253CC4E206E0F15001F5B85 /* main.m */,
+			);
+			path = VideoVip_iphone;
+			sourceTree = "<group>";
+		};
+		4253CC58206E111A001F5B85 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC55206E0FB3001F5B85 /* CCHomeViewController.h */,
+				4253CC56206E0FB3001F5B85 /* CCHomeViewController.m */,
+				4253CC62206E4367001F5B85 /* CCMainViewController.h */,
+				4253CC63206E4367001F5B85 /* CCMainViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4253CC59206E1129001F5B85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC5A206E114F001F5B85 /* CCURLModel.h */,
+				4253CC5B206E114F001F5B85 /* CCURLModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4253CC5D206E3BB1001F5B85 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC5E206E3BB1001F5B85 /* JsonKit */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		4253CC5E206E3BB1001F5B85 /* JsonKit */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC5F206E3BB1001F5B85 /* JSONKit.m */,
+				4253CC60206E3BB1001F5B85 /* JSONKit.h */,
+			);
+			path = JsonKit;
+			sourceTree = "<group>";
+		};
+		4253CC65206E46E6001F5B85 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4253CC66206E46FC001F5B85 /* CCItemButton.h */,
+				4253CC67206E46FC001F5B85 /* CCItemButton.m */,
+				4253CC69206E49A6001F5B85 /* CCMainTableViewCell.h */,
+				4253CC6A206E49A6001F5B85 /* CCMainTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4253CC3B206E0F15001F5B85 /* VideoVip_iphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4253CC52206E0F15001F5B85 /* Build configuration list for PBXNativeTarget "VideoVip_iphone" */;
+			buildPhases = (
+				4253CC38206E0F15001F5B85 /* Sources */,
+				4253CC39206E0F15001F5B85 /* Frameworks */,
+				4253CC3A206E0F15001F5B85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoVip_iphone;
+			productName = VideoVip_iphone;
+			productReference = 4253CC3C206E0F15001F5B85 /* VideoVip_iphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4253CC34206E0F15001F5B85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = chenchao;
+				TargetAttributes = {
+					4253CC3B206E0F15001F5B85 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4253CC37206E0F15001F5B85 /* Build configuration list for PBXProject "VideoVip_iphone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4253CC33206E0F15001F5B85;
+			productRefGroup = 4253CC3D206E0F15001F5B85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4253CC3B206E0F15001F5B85 /* VideoVip_iphone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4253CC3A206E0F15001F5B85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4253CC4C206E0F15001F5B85 /* LaunchScreen.storyboard in Resources */,
+				4253CC49206E0F15001F5B85 /* Assets.xcassets in Resources */,
+				4253CC47206E0F15001F5B85 /* Main.storyboard in Resources */,
+				4253CC6D206E4CFE001F5B85 /* viplist.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4253CC38206E0F15001F5B85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4253CC4F206E0F15001F5B85 /* main.m in Sources */,
+				4253CC64206E4367001F5B85 /* CCMainViewController.m in Sources */,
+				4253CC41206E0F15001F5B85 /* AppDelegate.m in Sources */,
+				4253CC57206E0FB3001F5B85 /* CCHomeViewController.m in Sources */,
+				4253CC68206E46FC001F5B85 /* CCItemButton.m in Sources */,
+				4253CC5C206E114F001F5B85 /* CCURLModel.m in Sources */,
+				4253CC6B206E49A6001F5B85 /* CCMainTableViewCell.m in Sources */,
+				4253CC61206E3BB1001F5B85 /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4253CC45206E0F15001F5B85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4253CC46206E0F15001F5B85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4253CC4A206E0F15001F5B85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4253CC4B206E0F15001F5B85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4253CC50206E0F15001F5B85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4253CC51206E0F15001F5B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4253CC53206E0F15001F5B85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
+				INFOPLIST_FILE = VideoVip_iphone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.VideoVip-iphone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4253CC54206E0F15001F5B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AS4N82Q9E;
+				INFOPLIST_FILE = VideoVip_iphone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cc.VideoVip-iphone";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4253CC37206E0F15001F5B85 /* Build configuration list for PBXProject "VideoVip_iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4253CC50206E0F15001F5B85 /* Debug */,
+				4253CC51206E0F15001F5B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4253CC52206E0F15001F5B85 /* Build configuration list for PBXNativeTarget "VideoVip_iphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4253CC53206E0F15001F5B85 /* Debug */,
+				4253CC54206E0F15001F5B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4253CC34206E0F15001F5B85 /* Project object */;
+}
