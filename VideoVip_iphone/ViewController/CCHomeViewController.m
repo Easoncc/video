@@ -9,7 +9,7 @@
 #import "CCHomeViewController.h"
 #import <WebKit/WebKit.h>
 #import "JSONKit.h"
-#import <Masonry.h>
+#import <Masonry.h>z
 
 @interface CCHomeViewController ()<WKNavigationDelegate,WKUIDelegate,UIWebViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -101,7 +101,7 @@
 }
 
 - (void)initNar{
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:self action:@selector(backItemClick)];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStyleDone target:self action:@selector(backItemClick)];
     self.navigationItem.leftBarButtonItem = backItem;
     
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"vip" style:UIBarButtonItemStyleDone target:self action:@selector(vipItemClick)];
